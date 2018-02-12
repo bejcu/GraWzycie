@@ -1,0 +1,203 @@
+\hypertarget{funkcje_8h}{}\section{Dokumentacja pliku C\+:/\+Users/\+Tomek/\+Desktop/\+Grawzycie\+Okienka/funkcje.h}
+\label{funkcje_8h}\index{C\+:/\+Users/\+Tomek/\+Desktop/\+Grawzycie\+Okienka/funkcje.\+h@{C\+:/\+Users/\+Tomek/\+Desktop/\+Grawzycie\+Okienka/funkcje.\+h}}
+{\ttfamily \#include $<$string$>$}\\*
+Wykres zależności załączania dla funkcje.\+h\+:
+% FIG 0
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:
+% FIG 1
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtablica}{tablica}
+\item 
+struct \hyperlink{struct_lista_tablic}{Lista\+Tablic}
+\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtablica}{tablica} $\ast$$\ast$ \hyperlink{funkcje_8h_a3282f9b599e919b01fdf3c013ecdaecd}{Nowa} (int c)
+\item 
+void \hyperlink{funkcje_8h_a187b797b1f9cdadccdffa80aed68c440}{wait} (int seconds)
+\item 
+\hyperlink{structtablica}{tablica} $\ast$$\ast$ \hyperlink{funkcje_8h_a41fda0160cbf2ffde8cccabf4c1b35d9}{funkcja} (\hyperlink{structtablica}{tablica} $\ast$$\ast$T, int c)
+\item 
+void \hyperlink{funkcje_8h_ad14651d4abb2d1ba4078e66636a6f96e}{losuj} (\hyperlink{structtablica}{tablica} $\ast$$\ast$T, int c)
+\item 
+void \hyperlink{funkcje_8h_aa586cb91604bda048c99936d8d216413}{zapiszdo} (string nazwa, \hyperlink{structtablica}{tablica} $\ast$$\ast$T, int c)
+\item 
+\hyperlink{structtablica}{tablica} $\ast$$\ast$ \hyperlink{funkcje_8h_a2bf4b358ce5f7eb9c9dff09f645343a2}{wczytaj} (string nazwa, int \&c, bool \&p)
+\item 
+void \hyperlink{funkcje_8h_ab3965b53ea0969624e88ca92bc493722}{zapisz\+Liste} (string nazwa, \hyperlink{struct_lista_tablic}{Lista\+Tablic} $\ast$Lista, int c)
+\item 
+void \hyperlink{funkcje_8h_a379ce289c5ecb0f65ab6f0dad63ca326}{usun\+Liste} (\hyperlink{struct_lista_tablic}{Lista\+Tablic} $\ast$L)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji}
+\hypertarget{funkcje_8h_a41fda0160cbf2ffde8cccabf4c1b35d9}{}\index{funkcje.\+h@{funkcje.\+h}!funkcja@{funkcja}}
+\index{funkcja@{funkcja}!funkcje.\+h@{funkcje.\+h}}
+\subsubsection[{funkcja}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tablica}$\ast$$\ast$ funkcja (
+\begin{DoxyParamCaption}
+\item[{{\bf tablica} $\ast$$\ast$}]{T, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{funkcje_8h_a41fda0160cbf2ffde8cccabf4c1b35d9}
+Procedura główna na zasadach gra w życie\+: W grze w życie, dla każdej komórki sprawdzana jest liczba aktywnych komórek sąsiadujących z daną wg sąsiedztwa Moore\textquotesingle{}a. Może ich być od 0 do 8. Nowy stan komórki wyznacza następująca reguła\+:
+
+Jeśli jest nieaktywna i dokładnie 3 sąsiednie są aktywne, staje się aktywna. Jeśli jest aktywna i 2 lub 3 sąsiednie są aktywne, pozostaje aktywna. W przeciwnym wypadku staje się nieaktywna. \mbox{[}2\mbox{]} 
+\begin{DoxyParams}{Parametry}
+{\em $\ast$$\ast$\+T} & dwuwymiarowa tablica dynamiczna \\
+\hline
+{\em c} & rozmiar tablicy dwuwymiarowej \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+gotowa Tablica. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Nota}
+lewy róg
+
+prawy róg
+
+prawy róg dolny
+
+lewy róg dolny
+
+pierwsza górna linia
+
+pierwsza lewa linia
+
+pierwsza prawa linia
+
+pierwsza dolna linia
+
+dla pozostałych i; 
+\end{DoxyNote}
+\hypertarget{funkcje_8h_ad14651d4abb2d1ba4078e66636a6f96e}{}\index{funkcje.\+h@{funkcje.\+h}!losuj@{losuj}}
+\index{losuj@{losuj}!funkcje.\+h@{funkcje.\+h}}
+\subsubsection[{losuj}]{\setlength{\rightskip}{0pt plus 5cm}void losuj (
+\begin{DoxyParamCaption}
+\item[{{\bf tablica} $\ast$$\ast$}]{T, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{funkcje_8h_ad14651d4abb2d1ba4078e66636a6f96e}
+Funkcja losująca tablice.
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$$\ast$\+T} & dwuwymiarowa tablica dynamiczna \\
+\hline
+{\em c} & rozmiar tablicy dwuwymiarowej. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+gotowa Tablica. 
+\end{DoxyReturn}
+\hypertarget{funkcje_8h_a3282f9b599e919b01fdf3c013ecdaecd}{}\index{funkcje.\+h@{funkcje.\+h}!Nowa@{Nowa}}
+\index{Nowa@{Nowa}!funkcje.\+h@{funkcje.\+h}}
+\subsubsection[{Nowa}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tablica}$\ast$$\ast$ Nowa (
+\begin{DoxyParamCaption}
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{funkcje_8h_a3282f9b599e919b01fdf3c013ecdaecd}
+Funkcja tworząca nową tablice.
+
+
+\begin{DoxyParams}{Parametry}
+{\em c} & rozmiar tablicy dwuwymiarowej. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+gotowa Tablica. 
+\end{DoxyReturn}
+\hypertarget{funkcje_8h_a379ce289c5ecb0f65ab6f0dad63ca326}{}\index{funkcje.\+h@{funkcje.\+h}!usun\+Liste@{usun\+Liste}}
+\index{usun\+Liste@{usun\+Liste}!funkcje.\+h@{funkcje.\+h}}
+\subsubsection[{usun\+Liste}]{\setlength{\rightskip}{0pt plus 5cm}void usun\+Liste (
+\begin{DoxyParamCaption}
+\item[{{\bf Lista\+Tablic} $\ast$}]{L}
+\end{DoxyParamCaption}
+)}\label{funkcje_8h_a379ce289c5ecb0f65ab6f0dad63ca326}
+Procedura która usuwa Liste
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$\+L} & Lista która ma zostać usunięta \\
+\hline
+\end{DoxyParams}
+\hypertarget{funkcje_8h_a187b797b1f9cdadccdffa80aed68c440}{}\index{funkcje.\+h@{funkcje.\+h}!wait@{wait}}
+\index{wait@{wait}!funkcje.\+h@{funkcje.\+h}}
+\subsubsection[{wait}]{\setlength{\rightskip}{0pt plus 5cm}void wait (
+\begin{DoxyParamCaption}
+\item[{int}]{seconds}
+\end{DoxyParamCaption}
+)}\label{funkcje_8h_a187b797b1f9cdadccdffa80aed68c440}
+Funkcja czekaj
+
+
+\begin{DoxyParams}{Parametry}
+{\em seconds} & sekundy które dla których program będzie czekał. \\
+\hline
+\end{DoxyParams}
+\hypertarget{funkcje_8h_a2bf4b358ce5f7eb9c9dff09f645343a2}{}\index{funkcje.\+h@{funkcje.\+h}!wczytaj@{wczytaj}}
+\index{wczytaj@{wczytaj}!funkcje.\+h@{funkcje.\+h}}
+\subsubsection[{wczytaj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tablica}$\ast$$\ast$ wczytaj (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa, }
+\item[{int \&}]{c, }
+\item[{bool \&}]{p}
+\end{DoxyParamCaption}
+)}\label{funkcje_8h_a2bf4b358ce5f7eb9c9dff09f645343a2}
+Procedura która używa wczytuje z pliku tablice
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & nazwa pliku \\
+\hline
+{\em c} & rozmiar tablicy dwuwymiarowej, zostaje rekurencyjnie wczytany z pliku \\
+\hline
+{\em p} & wartosc logincza decydujaca o poprawnosci pliku \\
+\hline
+\end{DoxyParams}
+\hypertarget{funkcje_8h_aa586cb91604bda048c99936d8d216413}{}\index{funkcje.\+h@{funkcje.\+h}!zapiszdo@{zapiszdo}}
+\index{zapiszdo@{zapiszdo}!funkcje.\+h@{funkcje.\+h}}
+\subsubsection[{zapiszdo}]{\setlength{\rightskip}{0pt plus 5cm}void zapiszdo (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa, }
+\item[{{\bf tablica} $\ast$$\ast$}]{T, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{funkcje_8h_aa586cb91604bda048c99936d8d216413}
+Procedura która zapisuje Tablice do pliku zapisuje tablice do listy kierunkowej
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & nazwa pliku \\
+\hline
+{\em $\ast$$\ast$\+T} & dwuwymiarowa tablica dynamiczna \\
+\hline
+{\em c} & rozmiar tablicy dwuwymiarowej \\
+\hline
+\end{DoxyParams}
+\hypertarget{funkcje_8h_ab3965b53ea0969624e88ca92bc493722}{}\index{funkcje.\+h@{funkcje.\+h}!zapisz\+Liste@{zapisz\+Liste}}
+\index{zapisz\+Liste@{zapisz\+Liste}!funkcje.\+h@{funkcje.\+h}}
+\subsubsection[{zapisz\+Liste}]{\setlength{\rightskip}{0pt plus 5cm}void zapisz\+Liste (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa, }
+\item[{{\bf Lista\+Tablic} $\ast$}]{Lista, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\label{funkcje_8h_ab3965b53ea0969624e88ca92bc493722}
+Funkcja która zapisuje liste do pliku
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & nazwa pliku \\
+\hline
+{\em $\ast$\+Lista} & Lista którą zapisujemy do pliku \\
+\hline
+{\em c} & rozmiar tablicy dwuwymiarowej \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+gotowa Tablica. 
+\end{DoxyReturn}
